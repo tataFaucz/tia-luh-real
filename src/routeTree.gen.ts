@@ -9,8 +9,38 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as QuemSouRouteImport } from './routes/quem-sou'
+import { Route as ParceriasRouteImport } from './routes/parcerias'
+import { Route as NumerosRouteImport } from './routes/numeros'
+import { Route as ConteudoRouteImport } from './routes/conteudo'
+import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as IndexRouteImport } from './routes/index'
 
+const QuemSouRoute = QuemSouRouteImport.update({
+  id: '/quem-sou',
+  path: '/quem-sou',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParceriasRoute = ParceriasRouteImport.update({
+  id: '/parcerias',
+  path: '/parcerias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NumerosRoute = NumerosRouteImport.update({
+  id: '/numeros',
+  path: '/numeros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConteudoRoute = ConteudoRouteImport.update({
+  id: '/conteudo',
+  path: '/conteudo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +49,96 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
+  '/conteudo': typeof ConteudoRoute
+  '/numeros': typeof NumerosRoute
+  '/parcerias': typeof ParceriasRoute
+  '/quem-sou': typeof QuemSouRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
+  '/conteudo': typeof ConteudoRoute
+  '/numeros': typeof NumerosRoute
+  '/parcerias': typeof ParceriasRoute
+  '/quem-sou': typeof QuemSouRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
+  '/conteudo': typeof ConteudoRoute
+  '/numeros': typeof NumerosRoute
+  '/parcerias': typeof ParceriasRoute
+  '/quem-sou': typeof QuemSouRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/contato'
+    | '/conteudo'
+    | '/numeros'
+    | '/parcerias'
+    | '/quem-sou'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/contato' | '/conteudo' | '/numeros' | '/parcerias' | '/quem-sou'
+  id:
+    | '__root__'
+    | '/'
+    | '/contato'
+    | '/conteudo'
+    | '/numeros'
+    | '/parcerias'
+    | '/quem-sou'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContatoRoute: typeof ContatoRoute
+  ConteudoRoute: typeof ConteudoRoute
+  NumerosRoute: typeof NumerosRoute
+  ParceriasRoute: typeof ParceriasRoute
+  QuemSouRoute: typeof QuemSouRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/quem-sou': {
+      id: '/quem-sou'
+      path: '/quem-sou'
+      fullPath: '/quem-sou'
+      preLoaderRoute: typeof QuemSouRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/parcerias': {
+      id: '/parcerias'
+      path: '/parcerias'
+      fullPath: '/parcerias'
+      preLoaderRoute: typeof ParceriasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/numeros': {
+      id: '/numeros'
+      path: '/numeros'
+      fullPath: '/numeros'
+      preLoaderRoute: typeof NumerosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/conteudo': {
+      id: '/conteudo'
+      path: '/conteudo'
+      fullPath: '/conteudo'
+      preLoaderRoute: typeof ConteudoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,16 +151,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContatoRoute: ContatoRoute,
+  ConteudoRoute: ConteudoRoute,
+  NumerosRoute: NumerosRoute,
+  ParceriasRoute: ParceriasRoute,
+  QuemSouRoute: QuemSouRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}
