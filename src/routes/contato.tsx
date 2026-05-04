@@ -6,13 +6,15 @@ export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
       { title: "Contato — Tia Luh" },
-      { name: "description", content: "Vamo fechar parceria? Email, WhatsApp e formulário direto. Sem coach, só real." },
+      { name: "description", content: "Vamo de verdade? Mande sua proposta direto pelo email." },
       { property: "og:title", content: "Contato Tia Luh" },
-      { property: "og:description", content: "Email e WhatsApp para parcerias." },
+      { property: "og:description", content: "Email pra parcerias." },
     ],
   }),
   component: ContatoPage,
 });
+
+const EMAIL = "Universodaluh.contato@gmail.com";
 
 function ContatoPage() {
   const [sent, setSent] = useState(false);
@@ -25,14 +27,12 @@ function ContatoPage() {
             VAMO DE<br/><span className="text-blood">VERDADE?</span>
           </h1>
           <p className="mt-6 text-paper/85 font-mono max-w-md">
-            Manda direto. Sem brief de 40 páginas, sem coach, sem "vamos alinhar a sinergia". Fala o que precisa, eu te respondo.
+            Manda direto. Sem brief de 40 páginas, sem enrolação. Fala o que precisa, eu te respondo.
           </p>
 
           <div className="mt-8 space-y-4 font-mono">
-            <ContactLine label="EMAIL" value="Universomaternodaluh@gmail.com" href="mailto:Universomaternodaluh@gmail.com" />
-            <ContactLine label="WHATSAPP" value="(47) 99687-5732" href="https://wa.me/5547996875732" />
+            <ContactLine label="EMAIL" value={EMAIL} href={`mailto:${EMAIL}`} />
             <ContactLine label="INSTAGRAM" value="@universoluh.oficial" href="https://instagram.com/universoluh.oficial" />
-            <ContactLine label="TIKTOK" value="@tialuh" href="https://tiktok.com/@tialuh" />
           </div>
 
           <div className="mt-10">
@@ -62,7 +62,7 @@ function ContatoPage() {
           </button>
           {sent && (
             <p className="text-center text-ink font-mono text-sm">
-              Beleza! Te respondo no email em até 48h. Sem enrolação.
+              Beleza! Te respondo no email em até 48h.
             </p>
           )}
         </form>
@@ -75,7 +75,7 @@ function ContactLine({ label, value, href }: { label: string; value: string; hre
   return (
     <a href={href} target="_blank" rel="noreferrer" className="flex items-baseline gap-3 group">
       <span className="font-display tracking-widest text-blood text-sm w-24 shrink-0">{label}</span>
-      <span className="text-paper group-hover:underline decoration-blood decoration-4 underline-offset-4">{value}</span>
+      <span className="text-paper group-hover:underline decoration-blood decoration-4 underline-offset-4 break-all">{value}</span>
     </a>
   );
 }

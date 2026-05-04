@@ -13,17 +13,17 @@ export function SiteFooter() {
         </div>
 
         <div className="flex justify-start md:justify-center">
-          <span className="stamp animate-stamp">REAL OFICIAL</span>
+          <span className="stamp animate-stamp">VAMO DE VERDADE?</span>
         </div>
 
         <div className="md:text-right text-paper/80 text-sm font-mono space-y-1">
           <div><a className="hover:text-blood" href="https://instagram.com/universoluh.oficial" target="_blank" rel="noreferrer">@universoluh.oficial</a></div>
-          <div><a className="hover:text-blood" href="mailto:Universomaternodaluh@gmail.com">Universomaternodaluh@gmail.com</a></div>
-          <div>(47) 99687-5732 · Joinville/SC</div>
+          <div className="break-all"><a className="hover:text-blood" href="mailto:Universodaluh.contato@gmail.com">Universodaluh.contato@gmail.com</a></div>
+          <div>Joinville/SC</div>
         </div>
       </div>
       <div className="border-t border-paper/10 py-3 text-center text-[11px] uppercase tracking-widest text-steel font-mono">
-        © {new Date().getFullYear()} Tia Luh · Mãe de 3 · Real desde 16
+        © {new Date().getFullYear()} Luana Pessoa · Tia Luh
       </div>
     </footer>
   );

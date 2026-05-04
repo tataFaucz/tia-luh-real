@@ -4,29 +4,25 @@ import { StarScribble, BoltScribble } from "@/components/Scribbles";
 export const Route = createFileRoute("/parcerias")({
   head: () => ({
     meta: [
-      { title: "Parcerias — Tia Luh" },
-      { name: "description", content: "Marcas que confiaram: Salon Line, Dig For Fashion, Lobits, Blake's Brownie e mais. Vamo de verdade?" },
+      { title: "Parcerias & Mídia — Tia Luh" },
+      { name: "description", content: "Parcerias: 208 Studio e Giovanni Cabeleireiro. Se eu aprovo, eu indico." },
       { property: "og:title", content: "Parcerias da Tia Luh" },
-      { property: "og:description", content: "Marcas reais, conteúdo real." },
+      { property: "og:description", content: "Se eu aprovo, eu indico." },
     ],
   }),
   component: ParceriasPage,
 });
 
 const brands = [
-  { name: "SALON LINE", reach: "+97M", color: "bg-blood" },
-  { name: "DIG FOR FASHION", reach: "21,3 mil", color: "bg-paper text-ink" },
-  { name: "LOBITS", reach: "6,9 mil", color: "bg-ink border-paper" },
-  { name: "BLAKE'S BROWNIE", reach: "35 mil", color: "bg-paper text-ink" },
-  { name: "CRIS NAILS", reach: "8 mil", color: "bg-blood" },
-  { name: "CANUTO BARBEARIA", reach: "135,5 mil", color: "bg-ink border-paper" },
+  { name: "208 STUDIO", reach: "Parceria fixa", color: "bg-blood" },
+  { name: "GIOVANNI CABELEIREIRO", reach: "Beleza & cabelo", color: "bg-paper text-ink" },
 ];
 
 const slogans = [
-  "SEM ROMANTIZAR.",
+  "SE EU APROVO, EU INDICO.",
   "VAMO DE VERDADE?",
-  "EU DISSE E REPITO.",
-  "REAL OFICIAL.",
+  "SEM ROMANTIZAR.",
+  "VIDA REAL.",
 ];
 
 function ParceriasPage() {
@@ -35,21 +31,41 @@ function ParceriasPage() {
       <section className="bg-ink-grain py-16">
         <div className="mx-auto max-w-7xl px-4">
           <div className="text-center mb-12">
-            <span className="stamp animate-stamp">DEU MATCH?</span>
+            <span className="stamp animate-stamp">SE EU APROVO, EU INDICO</span>
             <h1 className="mt-4 font-display text-paper text-6xl md:text-8xl leading-none">
               QUEM JÁ <span className="text-blood">VEIO COMIGO</span>
             </h1>
-            <p className="mt-4 text-steel font-mono uppercase tracking-widest text-xs">Parcerias TikTok + Instagram</p>
+            <p className="mt-4 text-steel font-mono uppercase tracking-widest text-xs">Parcerias atuais</p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
             {brands.map((b) => (
               <div key={b.name} className={`border-[4px] border-paper p-6 relative ${b.color}`}>
                 <BoltScribble className="absolute -top-4 -right-3 w-4 h-10 text-paper" />
                 <div className="font-display text-3xl leading-none">{b.name}</div>
-                <div className="mt-3 font-mono text-xs uppercase tracking-widest opacity-80">Alcance · {b.reach}</div>
+                <div className="mt-3 font-mono text-xs uppercase tracking-widest opacity-80">{b.reach}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Mídia / Reportagem */}
+      <section className="bg-ink-grain py-16 border-t border-paper/10">
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="text-center mb-10">
+            <span className="stamp">NA MÍDIA</span>
+            <h2 className="mt-4 font-display text-paper text-5xl md:text-6xl leading-none">
+              REPORTAGEM EM <span className="text-blood">PÁGINA FEMININA</span>
+            </h2>
+          </div>
+          <div className="max-w-3xl mx-auto zine-box p-6">
+            <div className="font-mono text-ink/80 text-xs uppercase tracking-widest">Embed / link</div>
+            <div className="mt-2 font-display text-2xl text-ink">Reportagem em página feminina</div>
+            <p className="mt-3 font-mono text-ink/80 text-sm">
+              Espaço reservado pra reportagem em veículo de página feminina. (link em breve)
+            </p>
+            <a href="#" className="mt-4 inline-block btn-paper">VER REPORTAGEM →</a>
           </div>
         </div>
       </section>
