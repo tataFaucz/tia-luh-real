@@ -4,10 +4,10 @@ import { BoltScribble, StarScribble } from "@/components/Scribbles";
 export const Route = createFileRoute("/conteudo")({
   head: () => ({
     meta: [
-      { title: "Conteúdo — Tia Luh" },
-      { name: "description", content: "5 formatos de conteúdo: Desabafo Real Oficial, Storytime, Sem Romantizar, Humor do Dia e Verdade Que Ninguém Fala." },
-      { property: "og:title", content: "Os formatos da Tia Luh" },
-      { property: "og:description", content: "Templates de conteúdo: desabafo, storytime, humor ácido e mais." },
+      { title: "Reels — Tia Luh" },
+      { name: "description", content: "Foco na criação de Reels autênticos e virais: Desabafo, Storytime, Sem Romantizar, Humor do Dia e Verdade Que Ninguém Fala." },
+      { property: "og:title", content: "Reels da Tia Luh" },
+      { property: "og:description", content: "Templates de Reels: desabafo, storytime, humor leve e mais." },
     ],
   }),
   component: ConteudoPage,
@@ -18,27 +18,30 @@ function ConteudoPage() {
     <section className="bg-ink-grain py-16">
       <div className="mx-auto max-w-7xl px-4">
         <div className="text-center mb-14">
-          <span className="stamp">EU DISSE</span>
+          <span className="stamp">FOCO EM REELS</span>
           <h1 className="mt-4 font-display text-paper text-6xl md:text-8xl leading-none">
-            5 JEITOS<br/>
-            <span className="text-blood">DE FALAR A REAL</span>
+            REELS<br/>
+            <span className="text-blood">AUTÊNTICOS E VIRAIS</span>
           </h1>
           <p className="mt-4 text-steel font-mono uppercase tracking-widest text-sm">Formatos · Templates · Tom</p>
+          <p className="mt-3 text-paper/90 font-mono max-w-2xl mx-auto">
+            Foco na criação de Reels autênticos e virais. Vida real, lifestyle e dicas leves — adaptáveis pra qualquer faixa etária.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
           {/* DESABAFO */}
           <Template
             tag="01"
-            title="DESABAFO REAL OFICIAL"
-            stamp="REAL OFICIAL"
-            description="Câmera na mão, luz dura, eu falando o que ninguém quer ouvir."
+            title="DESABAFO"
+            stamp="VAMO DE VERDADE?"
+            description="Bege texturizado, título gigante. Câmera na mão, eu falando o que precisa ser dito."
             bg="bg-paper"
             text="text-ink"
           >
             <div className="text-center py-8">
               <div className="font-display text-4xl text-ink leading-none">"NÃO É FASE.<br/>É CANSAÇO MESMO."</div>
-              <div className="mt-4 inline-block stamp animate-stamp">REAL OFICIAL</div>
+              <div className="mt-4 inline-block stamp animate-stamp">DESABAFO</div>
             </div>
           </Template>
 
@@ -46,7 +49,7 @@ function ConteudoPage() {
           <Template
             tag="02"
             title="STORYTIME"
-            stamp="EU DISSE"
+            stamp="3 QUADROS"
             description="Gancho > caos > punchline. Três quadros, sem enrolação."
             bg="bg-ink"
             text="text-paper"
@@ -91,11 +94,11 @@ function ConteudoPage() {
             </div>
           </Template>
 
-          {/* VERDADE QUE NINGUÉM FALA */}
+          {/* VERDADE NINGUÉM FALA */}
           <Template
             tag="05"
-            title="VERDADE QUE NINGUÉM FALA"
-            stamp="POLÊMICO"
+            title="VERDADE NINGUÉM FALA"
+            stamp="3 BULLETS"
             description="Título condensado + 3 bullets afiados com raio."
             bg="bg-paper"
             text="text-ink"
@@ -103,9 +106,9 @@ function ConteudoPage() {
           >
             <div className="grid md:grid-cols-3 gap-4">
               {[
-                "Maternidade adolescente NÃO é fim.",
-                "Você pode amar e querer espaço.",
-                "Coach de mãe não paga sua conta.",
+                "Pais de teen, vocês não estão sozinhos.",
+                "Rotina leve > rotina perfeita.",
+                "Consumir com calma também é dica.",
               ].map((t, i) => (
                 <div key={i} className="flex items-start gap-2">
                   <BoltScribble className="w-3 h-7 text-blood shrink-0 mt-1" />

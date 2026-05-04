@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import mirror from "@/assets/luh-mirror.jpg";
+import mirror from "@/assets/luh-6218.jpg";
 import { BoltScribble } from "@/components/Scribbles";
 
 export const Route = createFileRoute("/numeros")({
@@ -37,13 +37,13 @@ function NumerosPage() {
             <h1 className="font-display text-paper text-6xl md:text-8xl leading-none">
               OS <span className="text-blood">NÚMEROS</span><br/>NÃO MENTEM
             </h1>
-            <span className="stamp animate-stamp">REAL OFICIAL</span>
+            <span className="stamp animate-stamp">SE EU APROVO, EU INDICO</span>
           </div>
 
           {/* Big numbers */}
           <div className="grid md:grid-cols-3 gap-5">
-            <BigStat n="+1M" label="Seguidores TikTok" sub="29M views/mês · 2.5M likes/mês" />
-            <BigStat n="+180K" label="Seguidores Instagram" sub="3M views/mês · 440k likes/mês" />
+            <BigStat n="+1M" label="Seguidores TikTok" sub="Foco em Reels · alto engajamento" />
+            <BigStat n="+180K" label="Seguidores Instagram" sub="Reels autênticos e virais" />
             <BigStat n="70%+" label="Audiência 18–34" sub="Mulheres jovens, mães e adolescentes" />
           </div>
         </div>
@@ -69,9 +69,7 @@ function NumerosPage() {
               JÁ SAIU EM:
             </h2>
             <ul className="mt-6 space-y-4 text-paper font-mono">
-              <Press name="NSC TOTAL" quote='"Dei a volta por cima: influencer de Joinville soma 11 milhões de curtidas."' />
-              <Press name="SBT" quote="Mãe e filha dão dicas na TV sobre rotina na adolescência e menstruação." />
-              <Press name="REVISTA CRESCER" quote="Reportagem sobre maternidade real com filhos Ana (11) e Davi (8)." />
+              <Press name="PÁGINA FEMININA" quote="Reportagem em página feminina sobre vida real, lifestyle e maternidade leve." />
             </ul>
           </div>
         </div>
