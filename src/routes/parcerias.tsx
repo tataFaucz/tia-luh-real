@@ -14,13 +14,21 @@ export const Route = createFileRoute("/parcerias")({
 });
 
 const brands = [
-  { name: "208 STUDIO", reach: "Parceria fixa", color: "bg-blood" },
-  { name: "GIOVANNI CABELEIREIRO", reach: "Beleza & cabelo", color: "bg-paper text-ink" },
+  { name: "208 STUDIO", reach: "Tatuagens, piercings e cafés", color: "bg-blood", href: "https://www.instagram.com/reel/DXjxNQ6hZgl/?igsh=MTN1OWVtOXpxNW81YQ==" },
+  { name: "GEOVANI SILVA", reach: "Beleza & cabelo", color: "bg-paper text-ink", href: "https://www.instagram.com/reel/DQPmT31komI/?igsh=MWhzamR4c2lhbWFqNA==" },
+  { name: "META", reach: "Empresa de tecnologia controladora de redes sociais globais", color: "bg-paper text-ink", href: "https://www.instagram.com/reel/DZ8HGS3s_-y/?igsh=ZXNwbHJqa2plNnpn" },
+  { name: "SHEIN", reach: "global de varejo online de moda, beleza e estilo de vida", color: "bg-blood", href: "https://www.instagram.com/reel/DaL3630p8XT/?igsh=MWppOG95YjF6dmo4aA==" },
+  { name: "DRA. DIRLEIA", reach: "Estética", color: "bg-blood", href: "https://www.instagram.com/reel/DYQWnSnNyrn/?igsh=dTBuc3IyMGNodWl5" },
+  { name: "LUNAUME", reach: "Sushis a pronta entrega em Joinville", color: "bg-paper text-ink", href: "https://www.instagram.com/reel/DY8Am9XTIJW/?igsh=OWN1YjYxY2N6Mnp1" },
+  { name: "MANEKI NEKO", reach: "Comidas orientais e lámen em Joinville", color: "bg-paper text-ink", href: "https://www.instagram.com/reel/DXfTqKKD7Sg/?igsh=czR3dHlkM2JicGo5" },
+  { name: "SALON LINE", reach: "Shampoo, condicionador e tratamentos", color: "bg-blood", href: "https://vt.tiktok.com/ZSC3SgMLW/" },
+  { name: "CRIS NAILS", reach: "Nail Art", color: "bg-blood", href: "https://www.instagram.com/reel/DY2LEXGOEMb/?igsh=MWY4dHBqY3BueGdhcQ==" },
+  { name: "AQUI É R$5,00", reach: "Todos os produtos por R$5,00 em Joinville", color: "bg-paper text-ink", href: "https://vt.tiktok.com/ZSC3DFfJ6/" }
 ];
 
 const slogans = [
   "SE EU APROVO, EU INDICO.",
-  "VAMO DE VERDADE?",
+  "VAMO DE DESABAFO?",
   "SEM ROMANTIZAR.",
   "VIDA REAL.",
 ];
@@ -40,11 +48,25 @@ function ParceriasPage() {
 
           <div className="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
             {brands.map((b) => (
-              <div key={b.name} className={`border-[4px] border-paper p-6 relative ${b.color}`}>
-                <BoltScribble className="absolute -top-4 -right-3 w-4 h-10 text-paper" />
-                <div className="font-display text-3xl leading-none">{b.name}</div>
-                <div className="mt-3 font-mono text-xs uppercase tracking-widest opacity-80">{b.reach}</div>
-              </div>
+              b.href ? (
+                <a
+                  key={b.name}
+                  href={b.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`border-[4px] border-paper p-6 relative ${b.color} block`}
+                >
+                  <BoltScribble className="absolute -top-4 -right-3 w-4 h-10 text-paper" />
+                  <div className="font-display text-3xl leading-none">{b.name}</div>
+                  <div className="mt-3 font-mono text-xs uppercase tracking-widest opacity-80">{b.reach}</div>
+                </a>
+              ) : (
+                <div key={b.name} className={`border-[4px] border-paper p-6 relative ${b.color}`}>
+                  <BoltScribble className="absolute -top-4 -right-3 w-4 h-10 text-paper" />
+                  <div className="font-display text-3xl leading-none">{b.name}</div>
+                  <div className="mt-3 font-mono text-xs uppercase tracking-widest opacity-80">{b.reach}</div>
+                </div>
+              )
             ))}
           </div>
         </div>
@@ -56,16 +78,38 @@ function ParceriasPage() {
           <div className="text-center mb-10">
             <span className="stamp">NA MÍDIA</span>
             <h2 className="mt-4 font-display text-paper text-5xl md:text-6xl leading-none">
-              REPORTAGEM EM <span className="text-blood">PÁGINA FEMININA</span>
+              REPORTAGENS:
             </h2>
           </div>
           <div className="max-w-3xl mx-auto zine-box p-6">
-            <div className="font-mono text-ink/80 text-xs uppercase tracking-widest">Embed / link</div>
-            <div className="mt-2 font-display text-2xl text-ink">Reportagem em página feminina</div>
+            <div className="font-mono text-ink/80 text-xs uppercase tracking-widest"></div>
+            <div className="mt-2 font-display text-2xl text-ink">Reportagem em SBT - A Tarde é Nossa!</div>
             <p className="mt-3 font-mono text-ink/80 text-sm">
-              Espaço reservado pra reportagem em veículo de página feminina. (link em breve)
+              Entrevista leve e descontraída sobre a primeira menstruação, com a participação da minha filha Ana, de 12 anos.
             </p>
-            <a href="#" className="mt-4 inline-block btn-paper">VER REPORTAGEM →</a>
+            <a href="https://www.youtube-nocookie.com/embed/BbYTxVHtkLc?playlist=BbYTxVHtkLc&autoplay=1&iv_load_policy=3&loop=1&start=" className="mt-4 inline-block btn-paper" target="_blank" rel="noopener noreferrer">
+              VER REPORTAGEM →
+            </a>
+          </div>
+          <div className="max-w-3xl mx-auto zine-box p-6">
+            <div className="font-mono text-ink/80 text-xs uppercase tracking-widest"></div>
+            <div className="mt-2 font-display text-2xl text-ink">Reportagem em NSC TOTAL</div>
+            <p className="mt-3 font-mono text-ink/80 text-sm">
+              "Dei a volta por cima": influencer de Joinville soma 11 milhões de curtidas em rede social.
+            </p>
+            <a href="https://www.nsctotal.com.br/noticias/dei-a-volta-por-cima-influencer-de-joinville-soma-11-milhoes-de-curtidas-em-rede-social?utm_source=WhatsApp&utm_medium=link&utm_campaign=WhatsApp" className="mt-4 inline-block btn-paper" target="_blank" rel="noopener noreferrer">
+              VER REPORTAGEM →
+            </a>
+          </div>
+          <div className="max-w-3xl mx-auto zine-box p-6">
+            <div className="font-mono text-ink/80 text-xs uppercase tracking-widest"></div>
+            <div className="mt-2 font-display text-2xl text-ink">Revista Crescer</div>
+            <p className="mt-3 font-mono text-ink/80 text-sm">
+              
+            </p>
+            <a href="https://revistacrescer.globo.com/maes-e-pais/historias/noticia/2024/07/ela-e-trans-corte-de-cabelo-leva-pessoas-a-questionarem-sexualidade-de-menina-de-11-anos.ghtml?utm_source=Whatsapp&utm_medium=Social&utm_campaign=compartilhar" className="mt-4 inline-block btn-paper" target="_blank" rel="noopener noreferrer">
+              VER REPORTAGEM →
+            </a>
           </div>
         </div>
       </section>

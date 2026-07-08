@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "vite build && node scripts/generate-client-index.cjs",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
+    "clean": "rimraf dist",
+    "vercel-build": "npm run build && node scripts/generate-client-index.cjs",
     "lint": "eslint .",
     "format": "prettier --write ."
   },

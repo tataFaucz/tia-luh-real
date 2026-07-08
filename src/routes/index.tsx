@@ -16,7 +16,7 @@ export const Route = createFileRoute("/")({
 
 const marqueePhrases = [
   "SEM ROMANTIZAR",
-  "VAMO DE VERDADE?",
+  "DICAS LEVES",
   "VIDA REAL",
   "LIFESTYLE",
   "MATERNIDADE LEVE",
@@ -37,12 +37,12 @@ function HomePage() {
             </div>
 
             <h1 className="font-display text-paper text-[clamp(3rem,8vw,7rem)] leading-[0.85] tracking-tight">
-              LUANA PESSOA
+              LUANA CRISTINA
               <span className="block text-blood">TIA LUH</span>
             </h1>
 
             <p className="mt-6 max-w-xl text-paper/85 text-lg font-mono leading-relaxed">
-              Vida real, maternidade, lifestyle e <span className="bg-blood text-paper px-1">dicas leves</span>. Humor sem peso, pra qualquer idade.
+              Vida real, maternidade, lifestyle e <span className="bg-blood text-paper px-1">dicas leves</span>. Conteúdo autêntico e bem-humorado.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -99,12 +99,12 @@ function HomePage() {
           <div>
             <span className="stamp stamp-ink">QUEM EU SOU</span>
             <h2 className="mt-4 font-display text-ink text-6xl md:text-7xl leading-none">
-              LUANA, 30.<br/>
+              LUANA, 30 ANOS.<br/>
               <span className="text-blood">MÃE SOLO.</span><br/>
               VIDA LEVE.
             </h2>
             <p className="mt-6 text-ink/80 max-w-md font-mono">
-              Mãe solo da Ana e do Davi, adotei o Ewerton aos 14 (hoje 18). Mãe de 3 pets resgatados. Influencer digital há 2 anos com humor leve, dicas de rotina e o que eu consumo.
+              Mãe solo da Ana e do Davi! Adotei o Ewerton quando tinha 14 anos e hoje já é maior de idade. Mãe de 3 pets resgatados. Influencer digital há 2 anos com humor leve, dicas de rotina e o que eu consumo.
             </p>
             <Link to="/quem-sou" className="mt-6 inline-flex items-center gap-2 font-display text-ink text-xl border-b-4 border-blood pb-1">
               LER A HISTÓRIA <ArrowScribble className="w-12 h-5 text-blood" />

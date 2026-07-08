@@ -5,16 +5,16 @@ import { StarScribble } from "@/components/Scribbles";
 export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
-      { title: "Contato — Tia Luh" },
-      { name: "description", content: "Vamo de verdade? Mande sua proposta direto pelo email." },
-      { property: "og:title", content: "Contato Tia Luh" },
+      { title: "Contato — Luana Cristina" },
+      { name: "description", content: "Mande sua proposta de job pelo email." },
+      { property: "og:title", content: "Contato — Luana Cristina" },
       { property: "og:description", content: "Email pra parcerias." },
     ],
   }),
   component: ContatoPage,
 });
 
-const EMAIL = "Universodaluh.contato@gmail.com";
+const EMAIL = "universoluh.influmatch@gmail.com";
 
 function ContatoPage() {
   const [sent, setSent] = useState(false);
@@ -23,11 +23,9 @@ function ContatoPage() {
       <div className="mx-auto max-w-6xl px-4 grid lg:grid-cols-2 gap-10 items-start">
         <div>
           <span className="stamp animate-stamp">DEU MATCH?</span>
-          <h1 className="mt-4 font-display text-paper text-6xl md:text-7xl leading-none">
-            VAMO DE<br/><span className="text-blood">VERDADE?</span>
-          </h1>
+          <h1 className="font-display text-4xl text-ink mt-4">BORA CONVERSAR?</h1>
           <p className="mt-6 text-paper/85 font-mono max-w-md">
-            Manda direto. Sem brief de 40 páginas, sem enrolação. Fala o que precisa, eu te respondo.
+            Manda sua proposta de job pelo email.
           </p>
 
           <div className="mt-8 space-y-4 font-mono">

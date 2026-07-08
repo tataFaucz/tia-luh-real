@@ -64,12 +64,15 @@ function NumerosPage() {
               className="xerox-photo w-full max-w-md mx-auto border-[6px] border-paper shadow-[10px_10px_0_var(--blood)]" />
           </div>
           <div>
-            <span className="stamp">CLIPPING</span>
+            <span className="stamp">DESTAQUES</span>
             <h2 className="mt-4 font-display text-paper text-5xl leading-none">
               JÁ SAIU EM:
             </h2>
             <ul className="mt-6 space-y-4 text-paper font-mono">
-              <Press name="PÁGINA FEMININA" quote="Reportagem em página feminina sobre vida real, lifestyle e maternidade leve." />
+              <Press name="NSC TOTAL" quote="“Dei a volta por cima”: influencer de Joinville soma 11 milhões de curtidas em rede social" link="https://www.nsctotal.com.br/noticias/dei-a-volta-por-cima-influencer-de-joinville-soma-11-milhoes-de-curtidas-em-rede-social?utm_source=WhatsApp&utm_medium=link&utm_campaign=WhatsApp" />
+            </ul>
+            <ul className="mt-6 space-y-4 text-paper font-mono">
+              <Press name="SBT -> A Tarde é Nossa!" quote="Entrevista leve e descontraída sobre a primeira menstruação" link="https://www.nsctotal.com.br/noticias/dei-a-volta-por-cima-influencer-de-joinville-soma-11-milhoes-de-curtidas-em-rede-social?utm_source=WhatsApp&utm_medium=link&utm_campaign=WhatsApp" />
             </ul>
           </div>
         </div>

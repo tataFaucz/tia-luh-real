@@ -1,8 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import portrait from "@/assets/luh-6293.jpg";
-import family from "@/assets/family-kids.jpg";
+import photoDaviLuh from "@/assets/foto_daviluh.jpeg";
+import photoAnaLuh from "@/assets/foto_analuh.jpeg";
+import photoDavi from "@/assets/foto_davi.jpeg";
+import photoAna from "@/assets/foto_ana.jpeg";
 import vaselina from "@/assets/pet-vaselina.jpg";
-import { BoltScribble, StarScribble, HeartScribble } from "@/components/Scribbles";
+import { ArrowScribble, BoltScribble, StarScribble, HeartScribble } from "@/components/Scribbles";
 
 export const Route = createFileRoute("/quem-sou")({
   head: () => ({
@@ -74,12 +77,33 @@ function QuemSouPage() {
             <div className="lg:col-span-3 relative">
               <div className="tape top-[-14px] left-12 rotate-[-3deg]" />
               <div className="tape top-[-12px] right-16 rotate-[6deg]" />
-              <img src={family} alt="Luh com Ana, Davi e Ewerton" width={1280} height={896} loading="lazy"
-                className="w-full border-[5px] border-ink shadow-[8px_8px_0_var(--blood)]" />
-              <div className="mt-4 flex flex-wrap gap-2 font-mono text-sm">
-                <Tag>← EWERTON, 18 (adotei aos 14)</Tag>
-                <Tag>↑ EU, A LUH</Tag>
-                <Tag>ANA & DAVI →</Tag>
+              <div className="grid grid-cols-2 gap-4">
+                <PhotoPanel
+                  src={photoDaviLuh}
+                  alt="Luh com o Davi"
+                  caption="Luh e o Davi"
+                  tapeClass="-top-4 left-6 rotate-[-4deg]"
+                />
+                <PhotoPanel
+                  src={photoAnaLuh}
+                  alt="Luh com a Ana"
+                  caption="Luh e a Ana"
+                  tapeClass="-top-4 right-6 rotate-[4deg]"
+                />
+                <PhotoPanel
+                  src={photoDavi}
+                  alt="Davi sozinho"
+                  caption="Esse é o Davi"
+                  tapeClass="top-1 left-8 rotate-[2deg]"
+                  withArrow
+                />
+                <PhotoPanel
+                  src={photoAna}
+                  alt="Ana sozinha"
+                  caption="Essa é a Ana"
+                  tapeClass="top-1 right-8 rotate-[-2deg]"
+                  withArrow
+                />
               </div>
             </div>
 
@@ -90,7 +114,7 @@ function QuemSouPage() {
                 <div className="absolute -top-3 -right-3 stamp">VASELINA</div>
               </div>
               <p className="mt-4 font-mono text-ink">
-                A <strong>Vaselina</strong> é uma das três resgatadas. Mãe de pet também é mãe — e na minha casa entra todo mundo que precisa de teto.
+                Mãe de pet também é mãe — e na minha casa entra todo mundo que precisa de teto.
               </p>
             </div>
           </div>
@@ -122,6 +146,39 @@ function Bullet({ icon, k, v }: { icon: React.ReactNode; k: string; v: string })
         <div className="font-display text-2xl text-paper leading-none">{k}</div>
         <div className="text-steel text-[10px] tracking-widest uppercase">{v}</div>
       </div>
+    </div>
+  );
+}
+
+function PhotoPanel({
+  src,
+  alt,
+  caption,
+  tapeClass,
+  withArrow,
+}: {
+  src: string;
+  alt: string;
+  caption: string;
+  tapeClass: string;
+  withArrow?: boolean;
+}) {
+  return (
+    <div className="relative overflow-hidden border-[5px] border-ink shadow-[8px_8px_0_var(--blood)] bg-ink-grain">
+      <div className={`tape absolute ${tapeClass}`} />
+      <img src={src} alt={alt} width={640} height={640} loading="lazy"
+        className="xerox-photo w-full h-full object-cover" />
+      <div className="absolute bottom-3 left-3 right-3 bg-paper/80 border-2 border-ink p-3">
+        <div className="font-display text-sm text-ink uppercase tracking-[0.2em]">
+          {caption}
+        </div>
+      </div>
+      {withArrow ? (
+        <div className="absolute top-3 right-3 flex items-center gap-2 text-blood font-display text-sm uppercase tracking-[0.2em]">
+          <ArrowScribble className="w-12 h-4" />
+          <span>{caption}</span>
+        </div>
+      ) : null}
     </div>
   );
 }

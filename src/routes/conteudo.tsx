@@ -4,8 +4,8 @@ import { BoltScribble, StarScribble } from "@/components/Scribbles";
 export const Route = createFileRoute("/conteudo")({
   head: () => ({
     meta: [
-      { title: "Reels — Tia Luh" },
-      { name: "description", content: "Foco na criação de Reels autênticos e virais: Desabafo, Storytime, Sem Romantizar, Humor do Dia e Verdade Que Ninguém Fala." },
+      { title: "Reels — Luana Cristina" },
+      { name: "description", content: "Foco na criação de Reels autênticos e virais: Desabafo, Storytime, Sem Romantizar, Humor do Dia e Muito Mais." },
       { property: "og:title", content: "Reels da Tia Luh" },
       { property: "og:description", content: "Templates de Reels: desabafo, storytime, humor leve e mais." },
     ],
@@ -68,7 +68,6 @@ function ConteudoPage() {
             tag="03"
             title="SEM ROMANTIZAR"
             stamp="SEM ROMANTIZAR"
-            description="Preto, bege e UMA palavra vermelha. Direto no peito."
             bg="bg-paper"
             text="text-ink"
           >
@@ -99,7 +98,6 @@ function ConteudoPage() {
             tag="05"
             title="VERDADE NINGUÉM FALA"
             stamp="3 BULLETS"
-            description="Título condensado + 3 bullets afiados com raio."
             bg="bg-paper"
             text="text-ink"
             className="md:col-span-2"
