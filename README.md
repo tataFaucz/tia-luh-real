@@ -1,56 +1,76 @@
 # 📱 Mídia Kit – Luana Cristina
 
-Landing page desenvolvida para apresentar o **Mídia Kit da criadora de conteúdo Luana Cristina**, reunindo informações profissionais, estatísticas, formas de parceria e canais de contato em uma interface moderna, responsiva e de fácil navegação.
+Landing page desenvolvida para apresentar o **Mídia Kit da criadora de conteúdo Luana Cristina**, reunindo informações profissionais, estatísticas, formas de parceria e canais de contato em uma interface moderna, responsiva e otimizada para diferentes dispositivos.
+
+🔗 **Acesse a aplicação:** https://tia-luh-real-eight.vercel.app/
+
+---
 
 ## ✨ Sobre o projeto
 
-Este projeto consiste em uma página web estática otimizada para divulgação do trabalho da criadora, permitindo que empresas e parceiros tenham acesso às principais informações para propostas comerciais.
+O projeto foi desenvolvido para proporcionar uma apresentação profissional da criadora de conteúdo, permitindo que marcas, empresas e parceiros tenham acesso rápido às principais informações para propostas comerciais.
 
-O site foi desenvolvido com foco em:
+A aplicação prioriza:
 
-- 🎨 Design moderno e responsivo;
+- 🎨 Interface moderna e elegante;
+- 📱 Design totalmente responsivo;
 - ⚡ Alto desempenho e carregamento rápido;
-- 📱 Compatibilidade com dispositivos móveis;
+- ♿ Navegação intuitiva;
 - 💼 Apresentação profissional do mídia kit.
 
 ---
 
 ## 🚀 Funcionalidades
 
-- Apresentação da criadora;
-- Informações profissionais;
-- Estatísticas e métricas;
-- Exibição de redes sociais;
-- Informações para contato;
-- Layout responsivo;
-- Deploy utilizando Firebase Hosting.
+- 👩 Apresentação da criadora;
+- 📊 Exibição de métricas e estatísticas;
+- 📱 Links para redes sociais;
+- 🤝 Informações para parcerias comerciais;
+- 📞 Área de contato;
+- 📱 Layout responsivo para desktop, tablet e smartphone;
+- ⚡ Navegação rápida e otimizada.
+
+---
+
+## 🖥️ Demonstração
+
+A aplicação está disponível em:
+
+👉 **https://tia-luh-real-eight.vercel.app/**
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+Este projeto foi desenvolvido utilizando:
+
+- TypeScript
+- HTML5
+- CSS3
+- JavaScript
+- Vite
+- Vercel
 
 ---
 
 ## 📂 Estrutura do projeto
 
-```
-Midia Kit - Luana Cristina/
-├── dist/                  # Arquivos da aplicação para produção
-├── firebase.json          # Configuração do Firebase
-├── .firebaserc            # Configuração do projeto Firebase
-├── .gitignore
+```text
+tia-luh-real/
+│
+├── public/              # Arquivos públicos
+├── src/                 # Código-fonte da aplicação
+├── dist/                # Build de produção
+├── package.json
 ├── package-lock.json
-└── skills-lock.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
 ```
 
 ---
 
-## 🛠 Tecnologias utilizadas
-
-- HTML5
-- CSS3
-- JavaScript
-- Firebase Hosting
-
----
-
-## ▶️ Como executar o projeto
+## ▶️ Executando o projeto localmente
 
 ### 1. Clone o repositório
 
@@ -58,62 +78,99 @@ Midia Kit - Luana Cristina/
 git clone https://github.com/tataFaucz/tia-luh-real.git
 ```
 
-### 2. Entre na pasta
+### 2. Acesse a pasta
 
 ```bash
-cd "Midia Kit - Luana Cristina"
+cd tia-luh-real
 ```
 
-### 3. Execute localmente
+### 3. Instale as dependências
 
-Como o projeto é estático, basta abrir o arquivo:
-
-```
-dist/index.html
+```bash
+npm install
 ```
 
-ou utilizar uma extensão como **Live Server** no Visual Studio Code.
+### 4. Execute o servidor de desenvolvimento
+
+```bash
+npm run dev
+```
+
+A aplicação estará disponível em:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 📦 Build para produção
+
+Para gerar a versão otimizada da aplicação:
+
+```bash
+npm run build
+```
+
+Para visualizar o build localmente:
+
+```bash
+npm run preview
+```
 
 ---
 
 ## ☁️ Deploy
 
-O projeto está configurado para publicação utilizando **Firebase Hosting**.
+O deploy da aplicação é realizado utilizando **Vercel**, garantindo:
 
-Para publicar:
+- Deploy automático via GitHub;
+- Atualizações contínuas;
+- HTTPS;
+- CDN global;
+- Excelente desempenho.
 
-```bash
-firebase login
-firebase init hosting
-firebase deploy
-```
+Acesse a versão publicada:
+
+**https://tia-luh-real-eight.vercel.app/**
 
 ---
 
 ## 📱 Responsividade
 
-A aplicação foi desenvolvida para funcionar em:
+A aplicação foi desenvolvida para oferecer uma boa experiência em diferentes dispositivos:
 
 - 💻 Desktop
-- 📱 Smartphones
-- 📲 Tablets
+- 💼 Notebook
+- 📱 Smartphone
+- 📲 Tablet
 
 ---
 
 ## 📸 Prévia
 
-Adicione aqui uma captura de tela do projeto.
+Adicione uma captura de tela do projeto na pasta `docs`.
 
-```
+```text
 docs/
 └── preview.png
 ```
 
-Depois inclua:
+Depois utilize:
 
 ```md
 ![Preview](docs/preview.png)
 ```
+
+---
+
+## 📈 Melhorias futuras
+
+- Melhorar animações e transições;
+- Adicionar formulário de contato;
+- Implementar modo escuro;
+- Integrar analytics para métricas de acesso;
+- Facilitar futuras atualizações do conteúdo.
 
 ---
 
@@ -127,13 +184,15 @@ Depois inclua:
 
 ## 📄 Licença
 
-Este projeto foi desenvolvido para fins de apresentação profissional e portfólio.
+Este projeto foi desenvolvido para fins de apresentação profissional e composição de portfólio.
 
 ---
 
 ## ⭐ Contribuição
 
-Caso encontre alguma melhoria ou queira sugerir alterações, fique à vontade para abrir uma **Issue** ou enviar um **Pull Request**.
+Sugestões e melhorias são sempre bem-vindas.
+
+Caso encontre algum problema ou tenha alguma ideia para aprimorar o projeto, sinta-se à vontade para abrir uma **Issue** ou enviar um **Pull Request**.
 
 ---
 
